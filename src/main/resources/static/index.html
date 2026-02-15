@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener Microservice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>URL Shortener Microservice</h1>
+
+  <div class="card">
+    <h3>Shorten a URL</h3>
+    <p>Enter a valid URL (e.g., <code>https://www.google.com</code>)</p>
+
+    <form action="/api/shorturl" method="POST">
+      <div class="input-group">
+        <input type="text" name="url" placeholder="https://..." required>
+        <button type="submit">Shorten</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card usage">
+    <h3>Usage:</h3>
+    <p><code>GET /api/shorturl/1</code></p>
+    <h3>Example Output:</h3>
+    <p><code>{"original_url":"https://www.google.com","short_url":1}</code></p>
+  </div>
+</div>
+</body>
+</html>
